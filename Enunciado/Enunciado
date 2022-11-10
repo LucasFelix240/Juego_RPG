@@ -1,0 +1,59 @@
+
+Juego RPG
+
+
+Relevamiento
+
+Se pide desarrollar la lógica necesaria para un video juego RPG.
+
+
+
+Jugadores
+
+Se sabe que todos los tipos de personajes poseen vida (número entero entre 0 y 255), nombre y saben sumar y restar una determinada cantidad de vida 
+(valor máximo de 500 puntos). 
+Respecto de los ataques todos tienen una cantidad de ataque base y una velocidad de ataque base (número entero, expresado milisegundos).
+Tipos
+Existen por el momento 3 tipos de jugadores y se sabe que estos no cambian de tipo (quien nace guerrero, muere guerrero).
+El tipo Guerrero, cuando se le pide el Ataque Final(que no es lo mismo que ataque base) devuelve un 10% más y cuando se le reste daño, este solo resta el 90%.
+El tipo Daguero, cuando se le pide la Velocidad de Ataque Final, devuelve solo el 90% del total 
+(es decir que si tarda 1000 ms en atacar, cuando se le pida la velocidad de ataque a un daguero, este tiene que devolver 900 ms). 
+Por su ligereza al atacar, no lleva armadura, por lo que el daño que recibe tiene una bonificación de 10%.
+El tipo Alquimista, al momento de recuperar vida, recupera un 20% extra.
+
+
+
+Armas
+
+Todos nuestros personajes pueden equiparse con un arma que pueden brindar bonificaciones de ataque y velocidad de ataque:
+Manos Desnudas: no otorgan ninguna bonificación de daño y no agregan ninguna demora (es el arma por defecto de todos).
+Varita Mágica: Agrega 10 puntos de daño y no agrega demora al ataque.
+Espada Simple: Agrega 15 puntos de daño y agrega una demora fija de 10 ms.
+Espada Dual: Tiene un peso especial en kilos y suma 1 punto de daño por cada kilo 
+(siempre valores entero, máximo de 100 kilos) y agrega demora de 1 ms por cada kg.
+Daga Feroz: agregar 2 puntos de daño y agilizan la velocidad de ataque en 2 ms.
+Todas las armas poseen nombre y es importante saber que un jugador solo puede equiparse con un arma. 
+Si al momento de equiparse un arma ya poseía otra, descarta la anterior y se queda con la nueva.
+
+
+
+Pociones
+
+Todos los jugadores pueden consumir pociones que tienen diversos efectos beneficiosos.
+Poción roja: curan una determinada cantidad de vida (máximo de 255).
+Poción de conejo: baja el tiempo de ataque en 1 ms.
+Poción dragon: suman una determinada cantidad de daño base (máximo 255).
+Es importante saber que los jugadores pueden llevar equipadas varias pociones y 
+puede tomar alguna que posea o se las puede tomar todas juntas.
+
+
+
+Cálculo de Jugadores
+
+Como verán el cálculo de ataque y velocidad de ataque es complejo, por lo que vamos a detallar un poco más en este apartado.
+Todos los jugadores, poseen un ataque base y saben devolver un ataque final, que se calcula como
+Ataque Final = ataque base + bonificación de tipo (si posee) + bonificación de arma. El ataque
+Velocidad Ataque Final = velocidad base + bonificación de tipo (si posee) + bonificación de arma. 
+La velocidad base puede llegar hasta 5000 ms.
+
+
