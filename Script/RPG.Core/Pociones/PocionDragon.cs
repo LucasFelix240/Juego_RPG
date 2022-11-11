@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Script.Armas
+namespace RPG.Core.Pociones.Pociones
 {
-    public class VaritaMagica: Arma
+    public class PocionDragon: Pocion
     {
+        private int valor;
         
+
     }
 }

@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Script
+namespace RPG.Core.Jugador
 {
-    public class Alquimista: Personaje
+    public class Guerrero: Personaje
     {
-        
     }
 }

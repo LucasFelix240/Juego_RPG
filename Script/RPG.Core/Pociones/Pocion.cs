@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Script
+namespace RPG.Core.Pociones
 {
     public class Pocion
     {

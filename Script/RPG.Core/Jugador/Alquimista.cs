@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Script.Armas
+namespace RPG.Core.Jugador
 {
-    public class DagaFeroz: Arma
+    public class Alquimista: Personaje
     {
         
     }

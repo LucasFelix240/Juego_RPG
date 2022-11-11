@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Script
+namespace RPG.Core.Jugador
 {
     public class Personaje
     {
         private string nombre;
         private byte vida;
-        private int velAtaqueBase;
-        private int ataqueBase;
+        private short velAtaqueBase, ataqueBase;
+        private Arma arma;
 
-        public Personaje(string Nombre, byte Vida, int VelAtaqueBase, int AtaqueBase)
+        public Personaje(string unNombre, byte unaVida, short unVelAtaqueBase, short unAtaqueBase)
         {
             nombre = Nombre;
             vida = Vida;
             velAtaqueBase = VelAtaqueBase;
             ataqueBase = AtaqueBase;
+            arma = new ManosDesnudas();
         }
         public string Nombre
         {
@@ -49,11 +50,13 @@ namespace Script
         }
         public void EquiparArma(Arma arma)
         {
-
+            this.arma = arma;
         }
         public int EquiparPocion(Pocion pocion)
         {
 
         }
+        public virtual int AtaqueFinal
+            => ataqueBase ;
     }
 }
