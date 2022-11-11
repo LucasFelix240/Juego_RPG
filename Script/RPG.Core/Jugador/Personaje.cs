@@ -1,4 +1,6 @@
 using RPG.Core.Armas;
+using RPG.Core.Pociones;
+
 namespace RPG.Core.Jugador
 {
     public class Personaje
@@ -18,9 +20,11 @@ namespace RPG.Core.Jugador
         }
         public int SumarVida(int valor)
         {
+            return 0;
         }
         public int RestarVida(int valor)
         {
+            return 0;
         }
         public void EquiparArma(Arma arma)
         {
@@ -28,8 +32,18 @@ namespace RPG.Core.Jugador
         }
         public int EquiparPocion(Pocion pocion)
         {
+            return 0;
         }
         public virtual int AtaqueFinal
-            => ataqueBase ;
+            => ataqueBase + arma.BrindarAtaque(this);
+        public virtual int SacarVida
+            => vida;
+        public virtual int VelocidadAtaqueFinal
+        public void ReducirTiempoAtaque(short decremento)
+            => velAtaqueBase = (short)(velAtaqueBase - decremento);
+        public void IncrementoDaño(byte incremento)
+            => ataqueBase = (short)(ataqueBase + incremento);
+        public void CurarVida(byte aumento)
+            => vida = (byte)(vida + aumento);
     }
 }

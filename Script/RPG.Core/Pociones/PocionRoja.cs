@@ -1,10 +1,10 @@
-
+using RPG.Core.Jugador;
 namespace RPG.Core.Pociones;
 public class PocionRoja : Pocion
 {
-    short PuntosaCurar = 500;
+    byte puntosVida;
     public override void AfectarA(Personaje persona)
     {
-
+        persona.CurarVida(puntosVida);
     }
 }
