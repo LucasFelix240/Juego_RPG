@@ -5,8 +5,12 @@ using System.Threading.Tasks;
 
 namespace Script.Pociones
 {
-    public class PocionRoja
+    public class PocionRoja : Pocion
     {
-        
+        short PuntosaCurar = 500;
+        public override void AfectarA(Personaje persona)
+        {
+            Personaje.vida = 
+        }
     }
 }

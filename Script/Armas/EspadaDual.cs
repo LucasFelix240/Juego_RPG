@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Script.Armas
 {
-    public class EspadaDual
+    public class EspadaDual: Arma
     {
         
     }

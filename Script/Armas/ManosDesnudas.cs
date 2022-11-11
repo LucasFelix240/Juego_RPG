@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Script.Armas
 {
-    public class ManosDesnudas
+    public class ManosDesnudas: Arma
     {
         
     }

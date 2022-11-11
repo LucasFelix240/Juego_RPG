@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Script
 {
-    public class Alquimista
+    public class Alquimista: Personaje
     {
         
     }

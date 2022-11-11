@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Script.Armas
 {
-    public class VaritaMagica
+    public class VaritaMagica: Arma
     {
         
     }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Script.Armas
 {
-    public class DagaFeroz
+    public class DagaFeroz: Arma
     {
         
     }

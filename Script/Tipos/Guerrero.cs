@@ -5,8 +5,15 @@ using System.Threading.Tasks;
 
 namespace Script
 {
-    public class Guerrero
+    public class Guerrero: Personaje
     {
-        
+        public void AtaqueFinal()
+        {
+
+        }
+        public void Restarvida()
+        {
+            
+        }
     }
 }

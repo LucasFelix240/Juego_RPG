@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 
 namespace Script.Pociones
 {
-    public class PocionConejo
+    public class PocionConejo : Pocion
     {
-        
+        public byte Cooldown(int valor)
+        {
+            
+        }
     }
 }
