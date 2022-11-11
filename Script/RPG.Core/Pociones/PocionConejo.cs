@@ -1,15 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace RPG.Core.Pociones.Pociones
+namespace RPG.Core.Pociones;
+public class PocionConejo : Pocion
 {
-    public class PocionConejo : Pocion
+    public byte Cooldown(int valor)
     {
-        public byte Cooldown(int valor)
-        {
-            
-        }
     }
 }

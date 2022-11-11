@@ -1,16 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace RPG.Core.Pociones.Pociones
+namespace RPG.Core.Pociones;
+public class PocionRoja : Pocion
 {
-    public class PocionRoja : Pocion
+    short PuntosaCurar = 500;
+    public override void AfectarA(Personaje persona)
     {
-        short PuntosaCurar = 500;
-        public override void AfectarA(Personaje persona)
-        {
-            
-        }
+
     }
 }

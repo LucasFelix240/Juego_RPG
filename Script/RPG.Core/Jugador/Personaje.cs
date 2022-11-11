@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using RPG.Core.Armas;
 namespace RPG.Core.Jugador
 {
     public class Personaje
@@ -14,39 +10,17 @@ namespace RPG.Core.Jugador
 
         public Personaje(string unNombre, byte unaVida, short unVelAtaqueBase, short unAtaqueBase)
         {
-            nombre = Nombre;
-            vida = Vida;
-            velAtaqueBase = VelAtaqueBase;
-            ataqueBase = AtaqueBase;
+            nombre = unNombre;
+            vida = unaVida;
+            velAtaqueBase = unVelAtaqueBase;
+            ataqueBase = unAtaqueBase;
             arma = new ManosDesnudas();
-        }
-        public string Nombre
-        {
-            get { return nombre; }
-            set { nombre = value; }
-        }
-        public string Vida
-        {
-            get { return vida; }
-            set { vida = value; }
-        }
-        public int VelAtaqueBase
-        {
-            get { return velAtaqueBase; }
-            set { velAtaqueBase = value; }
-        }
-        public int AtaqueBase
-        {
-            get { return ataqueBase; }
-            set { ataqueBase = value; }
         }
         public int SumarVida(int valor)
         {
-            
         }
         public int RestarVida(int valor)
         {
-
         }
         public void EquiparArma(Arma arma)
         {
@@ -54,7 +28,6 @@ namespace RPG.Core.Jugador
         }
         public int EquiparPocion(Pocion pocion)
         {
-
         }
         public virtual int AtaqueFinal
             => ataqueBase ;

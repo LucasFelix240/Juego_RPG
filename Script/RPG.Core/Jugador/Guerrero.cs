@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace RPG.Core.Jugador
 {
-    public class Guerrero: Personaje
+    public class Guerrero : Personaje
     {
+        public Guerrero(string unNombre, byte unaVida, short unVelAtaqueBase, short unAtaqueBase) : base(unNombre, unaVida, unVelAtaqueBase, unAtaqueBase)
+        {
+        }
     }
 }

@@ -1,11 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace RPG.Core.Armas.Armas
+namespace RPG.Core.Armas;
+public class ManosDesnudas : Arma
 {
-    public class ManosDesnudas: Arma
+    public ManosDesnudas() : base("Manos Desnudas")
     {
+        
     }
 }

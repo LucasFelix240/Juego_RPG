@@ -1,14 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace RPG.Core.Pociones.Pociones
+namespace RPG.Core.Pociones;
+public class PocionDragon : Pocion
 {
-    public class PocionDragon: Pocion
-    {
-        private int valor;
-        
+    private int valor;
 
-    }
+
 }
