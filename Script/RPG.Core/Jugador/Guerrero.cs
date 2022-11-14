@@ -13,12 +13,14 @@ namespace RPG.Core.Jugador
         
         public override void RestarVida(short valor)
         {
+            valor = (short)(valor -  valor / 10);
             base.RestarVida(valor);
         }
+        short reducirvida;
 
         /*public byte DescontarVida(byte unaVida)
         {
             return (byte)(unaVida / 10);
-        }*/
+        }*/     
     }
 }
