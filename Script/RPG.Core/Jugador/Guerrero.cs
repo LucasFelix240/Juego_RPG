@@ -7,9 +7,13 @@ namespace RPG.Core.Jugador
         {
         }
         public override int AtaqueFinal => base.AtaqueFinal + base.AtaqueFinal / 10;
-        public byte DescontarVida(byte unaVida)
+
+        byte decremento;
+        public override void AfectarA(Personaje persona) => persona.SacarVida(decremento);
+
+        /*public byte DescontarVida(byte unaVida)
         {
             return (byte)(unaVida / 10);
-        }
+        }*/
     }
 }

@@ -3,7 +3,7 @@ using RPG.Core.Pociones;
 
 namespace RPG.Core.Jugador
 {
-    public class Personaje
+    public abstract class Personaje
     {
         private string nombre;
         private byte vida;
@@ -34,11 +34,20 @@ namespace RPG.Core.Jugador
         {
             return 0;
         }
+
+
         public virtual int AtaqueFinal
             => ataqueBase + arma.BrindarAtaque(this);
-        public virtual int SacarVida
-            => vida;
+        
+        public void SacarVida(byte decrementoVida)
+            => vida = (byte)(vida - decrementoVida);
+
         public virtual int VelocidadAtaqueFinal
+        {
+        }
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public void ReducirTiempoAtaque(short decremento)
             => velAtaqueBase = (short)(velAtaqueBase - decremento);
         public void IncrementoDaño(byte incremento)
