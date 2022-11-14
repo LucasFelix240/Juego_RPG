@@ -9,6 +9,7 @@ namespace RPG.Core.Jugador
         private byte vida;
         private short velAtaqueBase, ataqueBase;
         private Arma arma;
+        private Pocion? pocion;
 
         public Personaje(string unNombre, byte unaVida, short unVelAtaqueBase, short unAtaqueBase)
         {
@@ -17,37 +18,42 @@ namespace RPG.Core.Jugador
             velAtaqueBase = unVelAtaqueBase;
             ataqueBase = unAtaqueBase;
             arma = new ManosDesnudas();
+            pocion = null;
         }
-        public int SumarVida(int valor)
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Esta por la mitad.
+        public virtual void SumarVida(short valor)
         {
-            return 0;
+            vida = (byte)(vida + valor);
         }
-        public int RestarVida(int valor)
+        public virtual void RestarVida(short valor)
         {
-            return 0;
+            vida = (byte)(vida - valor);
         }
         public void EquiparArma(Arma arma)
         {
             this.arma = arma;
         }
-        public int EquiparPocion(Pocion pocion)
+        public void EquiparPocion(Pocion pocion)
         {
-            return 0;
+            this.pocion = pocion;
         }
-
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Sin completar.
 
         public virtual int AtaqueFinal
             => ataqueBase + arma.BrindarAtaque(this);
         
-        public void SacarVida(byte decrementoVida)
-            => vida = (byte)(vida - decrementoVida);
+        /*public void SacarVida(byte decrementoVida)
+            => vida = (byte)(vida - decrementoVida);*/
 
-        public virtual int VelocidadAtaqueFinal
+        /*public virtual int VelocidadAtaqueFinal
         {
-        }
+        }*/
 
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Ya esta hecho.
         public void ReducirTiempoAtaque(short decremento)
             => velAtaqueBase = (short)(velAtaqueBase - decremento);
         public void IncrementoDaño(byte incremento)
