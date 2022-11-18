@@ -5,11 +5,12 @@ namespace RPG.Core.Jugador
 {
     public abstract class Personaje
     {
-        private string nombre;
-        private byte vida;
-        private short velAtaqueBase, ataqueBase;
+        public string nombre { get; set; }
+        public short vida { get; set; }
+        public short velAtaqueBase {get; set;}
+        public short ataqueBase { get; set; }
         private Arma arma;
-        private Pocion? pocion;
+        private List<Pocion> pociones;
 
         public Personaje(string unNombre, byte unaVida, short unVelAtaqueBase, short unAtaqueBase)
         {
@@ -18,10 +19,9 @@ namespace RPG.Core.Jugador
             velAtaqueBase = unVelAtaqueBase;
             ataqueBase = unAtaqueBase;
             arma = new ManosDesnudas();
-            pocion = null;
+            pociones = new List<Pocion>();
         }
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Esta por la mitad.
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
         public virtual void SumarVida(short valor)
         {
             vida = (byte)(vida + valor);
@@ -34,26 +34,23 @@ namespace RPG.Core.Jugador
         {
             this.arma = arma;
         }
-        public void EquiparPocion(Pocion pocion)
+        public void EquiparPocion(Pocion pocion) => pociones.Add(pocion);
+
+        public void TomatelasTodas()
         {
-            this.pocion = pocion;
+            pociones.ForEach(p=>p.AfectarA(this));
+            pociones.Clear();
         }
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //Sin completar.
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public virtual int VelocidadAtaqueFinal
             => velAtaqueBase + arma.BrindarVelAtaque(this);
         public virtual int AtaqueFinal
             => ataqueBase + arma.BrindarAtaque(this);
-        
-        /*public void SacarVida(byte decrementoVida)
-            => vida = (byte)(vida - decrementoVida);*/
 
-        /*public virtual int VelocidadAtaqueFinal
-        {
-        }*/
-
-
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Ya esta hecho.
         public void ReducirTiempoAtaque(short decremento)
             => velAtaqueBase = (short)(velAtaqueBase - decremento);
