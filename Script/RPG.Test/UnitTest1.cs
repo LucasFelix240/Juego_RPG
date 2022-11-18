@@ -49,17 +49,21 @@ public class RpgTest
         Assert.Equal("Manos Desnudas", armaPersonaje.nombre);
     }
 
-    [Fact]
-    public void EquiparArma()
+    [Theory]
+    [InlineData(10)]
+    [InlineData(20)]
+    [InlineData(30)]
+
+    public void EquiparArma(int cantidadPociones)
     {
         Ulises.EquiparPocion(pocionRoja_20);
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < cantidadPociones; i++)
         {
             Ulises.EquiparPocion(pocionConejo_1);
         }
         Ulises.EquiparArma(espadaSimple_1);
         Ulises.TomatelasTodas();
         Assert.Equal(220, Ulises.vida);
-        Assert.Equal(1495, Ulises.velAtaqueBase);
+        Assert.Equal(1500 - cantidadPociones, Ulises.velAtaqueBase);
     }
 }

@@ -7,7 +7,7 @@ namespace RPG.Core.Jugador
     {
         public string nombre { get; set; }
         public short vida { get; set; }
-        public short velAtaqueBase {get; set;}
+        public short velAtaqueBase { get; set; }
         public short ataqueBase { get; set; }
         public Arma arma { get; set; }
         private List<Pocion> pociones;
@@ -38,11 +38,11 @@ namespace RPG.Core.Jugador
 
         public void TomatelasTodas()
         {
-            pociones.ForEach(p=>p.AfectarA(this));
+            pociones.ForEach(p => p.AfectarA(this));
             pociones.Clear();
         }
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
-        
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public virtual int VelocidadAtaqueFinal
