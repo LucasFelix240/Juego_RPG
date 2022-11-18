@@ -40,7 +40,8 @@ namespace RPG.Core.Jugador
         }
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Sin completar.
-
+        public virtual int VelocidadAtaqueFinal
+            => velAtaqueBase + arma.BrindarVelAtaque(this);
         public virtual int AtaqueFinal
             => ataqueBase + arma.BrindarAtaque(this);
         

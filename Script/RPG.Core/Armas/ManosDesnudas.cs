@@ -3,6 +3,5 @@ public class ManosDesnudas : Arma
 {
     public ManosDesnudas() : base("Manos Desnudas")
     {
-        
     }
 }
