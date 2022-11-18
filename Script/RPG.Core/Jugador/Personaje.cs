@@ -9,7 +9,7 @@ namespace RPG.Core.Jugador
         public short vida { get; set; }
         public short velAtaqueBase {get; set;}
         public short ataqueBase { get; set; }
-        private Arma arma;
+        public Arma arma { get; set; }
         private List<Pocion> pociones;
 
         public Personaje(string unNombre, byte unaVida, short unVelAtaqueBase, short unAtaqueBase)

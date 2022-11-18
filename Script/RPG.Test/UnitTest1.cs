@@ -1,3 +1,4 @@
+using RPG.Core.Armas;
 using RPG.Core.Jugador;
 using RPG.Core.Pociones;
 
@@ -8,14 +9,18 @@ public class RpgTest
     public Personaje Ulises { get; set; }
     public Pocion pocionRoja_20 { get; set; }
     public Pocion pocionConejo_1 { get; set; }
+    public Arma armaPersonaje { get; set; }
+    public Arma espadaSimple_1 { get; set; }
     
     public RpgTest()
     {
         Ulises = new Guerrero(unNombre: "Ulises", unaVida: 200, unAtaqueBase: 100, unVelAtaqueBase: 1500);
         pocionRoja_20 = new PocionRoja(unosPuntosDeVida: 20);
         pocionConejo_1 = new PocionConejo(unTiempoAtaque: 1);
+        armaPersonaje = new ManosDesnudas();
+        espadaSimple_1 = new EspadaSimple(unNombre: "EspadaSimple");
     }
-    
+
     [Fact]
     public void Constructor()
     {
@@ -39,5 +44,22 @@ public class RpgTest
     public void RestarVida()
     {
         Ulises.RestarVida(100);
+        Assert.Equal(110, Ulises.vida);
+        Assert.Equal(110, Ulises.AtaqueFinal);
+        Assert.Equal("Manos Desnudas", armaPersonaje.nombre);
+    }
+
+    [Fact]
+    public void EquiparArma()
+    {
+        Ulises.EquiparPocion(pocionRoja_20);
+        for (int i = 0; i < 5; i++)
+        {
+            Ulises.EquiparPocion(pocionConejo_1);
+        }
+        Ulises.EquiparArma(espadaSimple_1);
+        Ulises.TomatelasTodas();
+        Assert.Equal(220, Ulises.vida);
+        Assert.Equal(1495, Ulises.velAtaqueBase);
     }
 }
