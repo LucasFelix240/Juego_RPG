@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG.Core", "RPG.Core\RPG.Core.csproj", "{58058181-DDEE-4528-8D25-0306660E3D9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rpg.Test", "RPG.Test\Rpg.Test.csproj", "{1084EE47-0F27-47D6-8943-38E6EE1453A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{58058181-DDEE-4528-8D25-0306660E3D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58058181-DDEE-4528-8D25-0306660E3D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58058181-DDEE-4528-8D25-0306660E3D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1084EE47-0F27-47D6-8943-38E6EE1453A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1084EE47-0F27-47D6-8943-38E6EE1453A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1084EE47-0F27-47D6-8943-38E6EE1453A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1084EE47-0F27-47D6-8943-38E6EE1453A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
