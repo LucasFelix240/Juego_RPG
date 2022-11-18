@@ -3,9 +3,11 @@ using RPG.Core.Jugador;
 namespace RPG.Core.Armas;
 public class EspadaDual : Arma
 {
-    public EspadaDual(string unNombre) : base(unNombre)
+    byte pesoKilos;
+    public EspadaDual(string unNombre, byte unPesoKilos) : base(unNombre)
     {
+        pesoKilos = unPesoKilos;
     }
-    public override int BrindarAtaque(Personaje personaje) => 1;
-    public override int BrindarVelAtaque(Personaje personaje) => 1;
+    public override int BrindarAtaque(Personaje personaje) => pesoKilos;
+    public override int BrindarVelAtaque(Personaje personaje) => pesoKilos;
 }

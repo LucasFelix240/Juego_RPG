@@ -7,5 +7,5 @@ public class DagaFeroz : Arma
     {
     }
     public override int BrindarAtaque(Personaje personaje) => 2;
-    public override int BrindarVelAtaque(Personaje personaje) => 2;
+    public override int BrindarVelAtaque(Personaje personaje) => -2;
 }
